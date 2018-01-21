@@ -1,0 +1,94 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Confirm Booking</title>
+	<!-- core CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <script src="script.js"></script>    
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<body>
+<div id="header">
+	<div id="Sidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="#">About</a>
+	  <a href="#">Services</a>
+	  <a href="#">Clients</a>
+	  <a href="#">Contact</a>
+	</div>
+<span onclick="openNav()"><i class="fa fa-navicon"></i></span>
+
+</div>
+<div id="container"class="cnfrmtn">
+<div class="submitform">
+	<form action="/action_page.php">
+		<div class="place">
+			<span class="left">
+				<h4>Reservation Upto</h4>
+				<h6>Kolkatta</h6>
+			</span>
+			<span class="right">
+				<h4>Reservation From</h4>
+				<h6>Ranchi</h6>
+			</span>
+		</div>
+		<div class="ddetails">
+			<span class="left">
+				<h4>Journey Date</h4>
+				<h6>23-Jan-2018</h6>
+			</span>
+			<span class="right">
+				<h4>Selected Seats</h4>
+				<h6>10,12,14</h6>
+			</span>
+		</div>
+		<div class="fare">
+			<h6>150.0 (Fare) + 20.0 (Service Charge)= 170.0</h6> 
+		</div>		
+		<div class="pdetails">
+			<span class="left">
+				<h4>Guest Name</h4>
+				<input type="text" name="name" placeholder="name">
+			</span>
+			<span class="right">
+				<h4>Mobile</h4>
+				<input type="text" name="mob" placeholder="Number">
+			</span>
+		</div>
+		<div class="asl">
+			<span class="left">
+				<h4>Gender</h4>
+				<div class="select_style">
+				<select name="text"> <!--Supplement an id here instead of using 'text'-->
+					<option value="value1" disabled="disabled" selected="selected">Select Gender</option> 
+					<option value="value2">Male</option>
+					<option value="value3">Female</option>
+				</select>
+				<span></span>
+				</div>
+			</span>
+			<span class="right">
+				<h4>Age</h4>
+				<input type="text" name="age" placeholder="Age">
+			</span>
+		</div>
+		<input type="submit" value="Confirm">
+	</form> 
+</div>
+	
+
+
+	
+</div>
+</body>
+</html>

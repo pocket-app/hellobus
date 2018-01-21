@@ -10,7 +10,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
-    <script src="script.js"></script>    
+    <script src="script.js"></script>  	
 </head>
 <body>
 <div id="header">
@@ -22,37 +22,25 @@
 	  <a href="#">Contact</a>
 	</div>
 <span onclick="openNav()"><i class="fa fa-navicon"></i></span>
-
+  <div id="sections_btn_holder">
+    <div onclick="toggleNavPanel('sections_panel')">Search <span id="navarrow"><i class="fa fa-search"></i></span></div>
+  </div>
+  <div id="sections_panel">
+    <div>
+      	<ul id="sub-menu" class="sub-menu toggle-submenu">
+			<li class="menu-item"><a href="#">Mumbai</a></li>
+			<li class="menu-item"><a href="#">Kolkatta</a></li>
+			<li class="menu-ite"><a href="#">Ahmedabad</a></li>
+			<li class="menu-item"><a href="#">Bihar</a></li>
+			<li class="menu-item"><a href="#">Cochin</a></li>
+			<li class="menu-item"><a href="#">Delhi</a></li>
+		</ul>
+    </div>
+  </div>
 </div>
 <div id="container" class="landing">
-<div class="submitform">
-	<form action="/action_page.php">
-		<div class="fromto">
-			<label>From</label><br>
-			<i class="fa fa-search"></i><input class="location" type="text" name="fplace" placeholder="Select From Location"><br>
-			<label>To</label><br>
-			<i class="fa fa-search"></i><input type="text" name="tplace" placeholder="Select Destination Location"><br>
-		</div>
-		<div class="datesel">
-			<label>Journey Date</label><br>
-			<input id="journey" type="date" value="2018-01-16"/>
-		<span class="left">
-			<label>From Time</label><br>
-			<input id="exit-time" name="exit-time" type="time">
-		</span>
-		<span class="right">
-			<label>To Time</label><br>
-			<input id="exit-time" name="exit-time" type="time">
-		</span>
-		</div>	
-	  <input type="submit" value="Search Buses">
-	</form> 
-</div>
-
-	
 
 
-	
 </div>
 </body>
 </html>
