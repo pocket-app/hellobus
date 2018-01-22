@@ -15,8 +15,14 @@ input {
 	padding: 10px 15px;
 }
 #header i {
-    max-width: 20px;
+    max-width: 30px;
 	cursor: pointer;
+	color:#fff;
+	font-size: 20px;
+}
+#header .closebtn i {
+    font-size: 20px;
+    margin-top: 10px;
 }
 #header .title {
     color: #fff;
@@ -40,7 +46,7 @@ input {
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 16px;
     color: #fff;
     display: block;
     transition: 0.3s;
@@ -55,14 +61,21 @@ input {
 	font-size: 36px;
 	color: #000;
 }
+#SideNav a i {
+    margin-right: 6px;
+}
+.profile {
+    font-size: 22px !important;
+    border-bottom: 1px solid #fff;
+}
 #container {
     transition: margin-left .5s;
     padding: 20px 2%;
 	width: 96%;
 }
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .sidenav {padding-top: 45px;}
+    .sidenav a {font-size: 16px;}
 } 
 /* Body */
 .fromto, .datesel {
@@ -73,12 +86,29 @@ input {
     width: 96%;
 }
 .submitform label {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
 }
 .submitform input {
     width: calc(100% - 30px);
     padding: 10px 1%;
+	font-size: 16px;
+}
+.submitform input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000;
+  opacity:0.9;
+}
+.submitform input::-moz-placeholder { /* Firefox 19+ */
+  color: #000;
+  opacity:0.9;
+}
+.submitform input:-ms-input-placeholder { /* IE 10+ */
+  color: #000;
+  opacity:0.9;
+}
+.submitform input:-moz-placeholder { /* Firefox 18- */
+  color: #000;
+  opacity:0.9;
 }
 .submitform input[type="date"], .submitform input[type="time"] {
     width: 100%;
@@ -100,6 +130,7 @@ input {
 .datesel #journey, .fromto .location {
     border-bottom: 1px solid #888;
     margin-bottom: 10px;
+	font-size: 16px;
 }
 .submitform input[type="submit"] {
     background: #ffa500;
@@ -182,14 +213,14 @@ input {
     width: 100%;
     padding: 15px 0;
 }
-.sresult center {
-    padding-bottom: 20px;
+#sections_panel center {
+    padding-top: 20px;
 }
-.sresult .left {
+.results .left {
 	font-size: 12px;
 	text-align: left;
 }
-.sresult .right {
+.results .right {
 	color: #ffa500;
 	font-size: 12px;
 	text-align: right;
@@ -198,25 +229,22 @@ input {
     float: left;
     width: 100%;
 }
-
-
-
-
-
-#container.select {
-    width: 96%;
-    max-width: 600px;
-    margin: 20px auto;
-    border: 1px solid #000;
+#contain.select {
+    width: 92%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    border: 1px solid #ffa500;
     border-radius: 20px;
+	padding: 20px 2%;
 }
-.driver {
-    text-align: right;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #000;
+#contain.drvr {
+    margin: 0 auto;
+    border: none;
 }
 
-
+.drvr {
+    text-align: center;
+}
 .bus {
   margin: 20px auto;
   max-width: 100%
@@ -259,6 +287,7 @@ ol {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  margin-bottom: 10px;
   justify-content: flex-start;
 }
 
@@ -268,15 +297,11 @@ ol {
   padding: 5px;
   position: relative;
 }
-.seat:nth-child(3) {
-  margin-right: 18.28571428571429%;
+.seat:nth-child(2) {
+  margin-right: 12.28571428571429%;
 }
-@media screen and (max-width:680px){
-.seat:nth-child(3) {
-    margin-right: 15.286%;
-}}
 @media screen and (max-width:460px){
-.seat:nth-child(3) {
+.seat:nth-child(2) {
     margin-right: 8.286%;
 }}
 .seat input[type=checkbox] {
@@ -284,19 +309,25 @@ ol {
   opacity: 0;
 }
 .seat input[type=checkbox]:checked + label {
-  background: #bada55;
   -webkit-animation-name: rubberBand;
   animation-name: rubberBand;
   animation-duration: 300ms;
   animation-fill-mode: both;
 }
+.seat input[type="checkbox"]:checked + label::before {
+    background: #117D37;
+    animation-fill-mode: none;
+}
 .seat input[type=checkbox]:disabled + label {
-  background: #F42536;
+  background: #000;
   text-indent: -9999px;
-  overflow: hidden;
+  overflow: visible;
+}
+.seat input[type="checkbox"]:disabled + label:before{
+	background:#EB2626;
 }
 .seat input[type=checkbox]:disabled + label:after {
-  content: "X";
+  content: " ";
   text-indent: 0;
   position: absolute;
   top: 4px;
@@ -306,19 +337,20 @@ ol {
 .seat input[type=checkbox]:disabled + label:hover {
   box-shadow: none;
   cursor: not-allowed;
-  background: #F42536;
+  background: #000;
 }
 .seat label {
   display: block;
   position: relative;
+  height: 24px;
   width: 100%;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
   line-height: 1.5rem;
   padding: 4px 0;
-  background: #ccc;
-  border-radius: 5px;
+  background: #000;
+  border-radius: 2px 2px 0 0;
   animation-duration: 300ms;
   animation-fill-mode: both;
 }
@@ -326,16 +358,16 @@ ol {
   content: "";
   position: absolute;
   width: 75%;
-  height: 75%;
-  top: 1px;
+  top: -10px;
   left: 50%;
+  height: 35px;
   transform: translate(-50%, 0%);
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 3px;
+  background: #4A4AC5;
+  border-radius: 3px 3px 0 0;
 }
 .seat label:hover {
   cursor: pointer;
-  box-shadow: 0 0 0px 2px #5C6AFF;
+  box-shadow: 0 0 0px 2px #ffa500;
 }
 
 @-webkit-keyframes rubberBand {
@@ -435,11 +467,6 @@ footer {
     color: #ffa500;
     font-weight: bold;
 }
-
-#sections_panel {
-    overflow: hidden;
-	height: 0;
-}
 #sections_btn_holder {
     float: right;
     width: calc(100% - 30px);
@@ -454,24 +481,17 @@ footer {
     margin-top: -2px;
 	text-align: left;
 }
-#sections_panel {
-  position: absolute;
-  height: 0px;
-  width: 96%;
-  background: #fff;
-  top: 35px;
-  left: 2%;
-  border-radius: 0px 0px 8px 8px;
-  overflow: hidden;
-  z-index: 10000;
-  transition: height 0.3s linear 0s;
-}
 #sections_panel > div {
   background: #fff;
+}
+#container.sresult {
+	background: #fff;
+    float: left;
 }
 #sub-menu {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 #sub-menu a {
     color: #000;
